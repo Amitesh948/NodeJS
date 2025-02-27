@@ -2,10 +2,13 @@ const express = require("express");
 const users = require("./MOCK_DATA.json");
 const fs = require("fs");
 
+const mongoose = require("mongoose");
+
 const app = express();
 const PORT = 8000;
 
 app.use(express.json());
+
 
 app.use(express.urlencoded({ extended: false }));
 app.get("/api/users", (req, res) => {
@@ -40,7 +43,7 @@ app
         console.error("Error deleting user:", err);
         return res.status(500).json({ message: "Failed to delete user" });
       }
-      res.json({ message: `User with ID ${id} deleted successfully` });
+      res.json({ message: `User with ID ${id} deleLearn Route Parameters, Query Strings, Dynamic Routing , Middlewareted successfully` });
     });
   });
 
